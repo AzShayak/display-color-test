@@ -21,6 +21,10 @@
         height: 100vh;
         display: flex;
       }
+      input[type='radio'] {
+        position: absolute;
+        z-index: -1;
+      }
       .color-display {
         width: 100%;
         height: 100%;
@@ -37,9 +41,18 @@
         gap: 10px;
         background: inherit;
       }
-      input[type='radio'] {
-        position: absolute;
-        z-index: -1;
+      label {
+        cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: large;
+        font-weight: normal;
+        opacity: 0.75;
+        color: transparent;
+        background: inherit;
+        background-clip: text;
+        -webkit-background-clip: text;
+        filter: invert(1) grayscale(1) contrast(5);
+        -webkit-filter: invert(1) grayscale(1) contrast(5);
       }
       #radio-black:checked ~ .color-display {
         background-color: #000;
@@ -64,19 +77,6 @@
       }
       #radio-cyan:checked ~ .color-display {
         background-color: #0ff;
-      }
-      label {
-        cursor: pointer;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: large;
-        font-weight: normal;
-        opacity: 0.75;
-        color: transparent;
-        background: inherit;
-        background-clip: text;
-        -webkit-background-clip: text;
-        filter: invert(1) grayscale(1) contrast(5);
-        -webkit-filter: invert(1) grayscale(1) contrast(5);
       }
       #radio-black:checked ~ .color-display > .labels > #label-black {
         font-weight: bolder;
