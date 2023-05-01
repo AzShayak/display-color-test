@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Test how your monitor displays colors, identify dead pixels and backlight bleed." />
+    <meta name="robots" content="index, nofollow" />
+
+    <title>Display color test</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+      }
+      .color-display {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background-color: black;
+      }
+      input[type='radio'] {
+        position: absolute;
+        z-index: -1;
+      }
+      #radio-black:checked ~ .color-display {
+        background-color: #000;
+      }
+      #radio-white:checked ~ .color-display {
+        background-color: #fff;
+      }
+      #radio-red:checked ~ .color-display {
+        background-color: #f00;
+      }
+      #radio-green:checked ~ .color-display {
+        background-color: #0f0;
+      }
+      #radio-blue:checked ~ .color-display {
+        background-color: #00f;
+      }
+      #radio-yellow:checked ~ .color-display {
+        background-color: #ff0;
+      }
+      #radio-magenta:checked ~ .color-display {
+        background-color: #f0f;
+      }
+      #radio-cyan:checked ~ .color-display {
+        background-color: #0ff;
+      }
+      label {
+        cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: large;
+        font-weight: lighter;
+        opacity: 0.75;
+        color: transparent;
+        background: inherit;
+        background-clip: text;
+        -webkit-background-clip: text;
+        filter: invert(1) grayscale(1) contrast(5);
+        -webkit-filter: invert(1) grayscale(1) contrast(5);
+      }
+      #radio-black:checked ~ .color-display > #label-black {
+        font-weight: bolder;
+        opacity: 1;
+      }
+      #radio-white:checked ~ .color-display > #label-white {
+        font-weight: bolder;
+        opacity: 1;
+      }
+      #radio-red:checked ~ .color-display > #label-red {
+        font-weight: bolder;
+        opacity: 1;
+      }
+      #radio-green:checked ~ .color-display > #label-green {
+        font-weight: bolder;
+        opacity: 1;
+      }
+      #radio-blue:checked ~ .color-display > #label-blue {
+        font-weight: bolder;
+        opacity: 1;
+      }
+      #radio-yellow:checked ~ .color-display > #label-yellow {
+        font-weight: bolder;
+        opacity: 1;
+      }
+      #radio-magenta:checked ~ .color-display > #label-magenta {
+        font-weight: bolder;
+        opacity: 1;
+      }
+      #radio-cyan:checked ~ .color-display > #label-cyan {
+        font-weight: bolder;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="radio" name="color" id="radio-black" autofocus checked />
+    <input type="radio" name="color" id="radio-white" />
+    <input type="radio" name="color" id="radio-red" />
+    <input type="radio" name="color" id="radio-green" />
+    <input type="radio" name="color" id="radio-blue" />
+    <input type="radio" name="color" id="radio-yellow" />
+    <input type="radio" name="color" id="radio-magenta" />
+    <input type="radio" name="color" id="radio-cyan" />
+    <div class="color-display">
+      <label for="radio-black" id="label-black">Black</label>
+      <label for="radio-white" id="label-white">White</label>
+      <label for="radio-red" id="label-red">Red</label>
+      <label for="radio-green" id="label-green">Green</label>
+      <label for="radio-blue" id="label-blue">Blue</label>
+      <label for="radio-yellow" id="label-yellow">Yellow</label>
+      <label for="radio-magenta" id="label-magenta">Magenta</label>
+      <label for="radio-cyan" id="label-cyan">Cyan</label>
+    </div>
+  </body>
+</html>
