@@ -25,11 +25,17 @@
         width: 100%;
         height: 100%;
         display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+      }
+      .labels {
+        display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         gap: 10px;
-        background-color: black;
+        background: inherit;
       }
       input[type='radio'] {
         position: absolute;
@@ -72,35 +78,35 @@
         filter: invert(1) grayscale(1) contrast(5);
         -webkit-filter: invert(1) grayscale(1) contrast(5);
       }
-      #radio-black:checked ~ .color-display > #label-black {
+      #radio-black:checked ~ .color-display > .labels > #label-black {
         font-weight: bolder;
         opacity: 1;
       }
-      #radio-white:checked ~ .color-display > #label-white {
+      #radio-white:checked ~ .color-display > .labels > #label-white {
         font-weight: bolder;
         opacity: 1;
       }
-      #radio-red:checked ~ .color-display > #label-red {
+      #radio-red:checked ~ .color-display > .labels > #label-red {
         font-weight: bolder;
         opacity: 1;
       }
-      #radio-green:checked ~ .color-display > #label-green {
+      #radio-green:checked ~ .color-display > .labels > #label-green {
         font-weight: bolder;
         opacity: 1;
       }
-      #radio-blue:checked ~ .color-display > #label-blue {
+      #radio-blue:checked ~ .color-display > .labels > #label-blue {
         font-weight: bolder;
         opacity: 1;
       }
-      #radio-yellow:checked ~ .color-display > #label-yellow {
+      #radio-yellow:checked ~ .color-display > .labels > #label-yellow {
         font-weight: bolder;
         opacity: 1;
       }
-      #radio-magenta:checked ~ .color-display > #label-magenta {
+      #radio-magenta:checked ~ .color-display > .labels > #label-magenta {
         font-weight: bolder;
         opacity: 1;
       }
-      #radio-cyan:checked ~ .color-display > #label-cyan {
+      #radio-cyan:checked ~ .color-display > .labels > #label-cyan {
         font-weight: bolder;
         opacity: 1;
       }
@@ -116,14 +122,16 @@
     <input type="radio" name="color" id="radio-magenta" />
     <input type="radio" name="color" id="radio-cyan" />
     <div class="color-display">
-      <label for="radio-black" id="label-black">Black</label>
-      <label for="radio-white" id="label-white">White</label>
-      <label for="radio-red" id="label-red">Red</label>
-      <label for="radio-green" id="label-green">Green</label>
-      <label for="radio-blue" id="label-blue">Blue</label>
-      <label for="radio-yellow" id="label-yellow">Yellow</label>
-      <label for="radio-magenta" id="label-magenta">Magenta</label>
-      <label for="radio-cyan" id="label-cyan">Cyan</label>
+      <div class="labels">
+        <label for="radio-black" id="label-black">Black</label>
+        <label for="radio-white" id="label-white">White</label>
+        <label for="radio-red" id="label-red">Red</label>
+        <label for="radio-green" id="label-green">Green</label>
+        <label for="radio-blue" id="label-blue">Blue</label>
+        <label for="radio-yellow" id="label-yellow">Yellow</label>
+        <label for="radio-magenta" id="label-magenta">Magenta</label>
+        <label for="radio-cyan" id="label-cyan">Cyan</label>
+      </div>
     </div>
   </body>
 </html>
